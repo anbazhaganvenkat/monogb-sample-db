@@ -10,9 +10,10 @@ db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 const express = require('express')
 const product = require('./routes/user.route'); //imports routes
 const app = express();
-const cors = require('cors')
+const cors = require('cors');
 
-const port = 3002
+
+
 const bodyParser = require('body-parser');
 app.use(cors())
 
@@ -25,6 +26,6 @@ app.get('/health', (req, res) => {
     res.send('ok')
   })
 
-app.listen(port, () => {
-    console.log('Server is up and running on port number ' + port);
-});
+  app.listen(process.env.PORT || 3000, function(){
+    console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
+  });
