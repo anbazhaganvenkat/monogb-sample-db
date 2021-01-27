@@ -21,7 +21,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use('/user', product);
 
 // Health Route check
-app.get('/', (req, res) => {
+app.get('/health', (req, res) => {
     res.send('ok')
   })
 
