@@ -12,7 +12,7 @@ const product = require('./routes/user.route'); //imports routes
 const app = express();
 const cors = require('cors')
 
-const port = "https://test-monogo-db.herokuapp.com/"
+const port = 3002
 const bodyParser = require('body-parser');
 app.use(cors())
 
